@@ -67,4 +67,5 @@ img + p {
   display: flex;
   flex-direction: column;
   width: 60vw;
+  justify-content: space-evenly;
 }
