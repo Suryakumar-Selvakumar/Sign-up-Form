@@ -13,7 +13,7 @@ body {
   font-family: Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  gap: 2vw;
+  background-color: rgba(247, 242, 242, 0.819);
 }
 
 .logo-section {
@@ -46,7 +46,8 @@ img + p {
   display: inline;
   font-family: "norsebold";
   color: white;
-  font-size: 8rem;
+  font-size: clamp(3rem, 4vw + 4rem, 8rem);
+  overflow: hidden;
 }
 
 .credit {
@@ -66,6 +67,80 @@ img + p {
 .content-section {
   display: flex;
   flex-direction: column;
-  width: 60vw;
-  justify-content: space-evenly;
+  width: calc(100% - 30vw);
+  justify-content: center;
+  gap: 5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  padding-left: 2.5vw;
+  padding-right: 17vw;
+}
+
+.header > p {
+  font-weight: 550;
+  font-size: clamp(1.75rem, 4vw + 1rem, 2.5rem);
+  padding-top: 2rem;
+  margin: 0;
+}
+
+.inputs {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5vw;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  padding-right: max(10vw, 1rem);
+  gap: 2rem;
+}
+
+.inputs > p {
+  font-weight: 550;
+  font-size: clamp(1.5rem, 4vw + 1rem, 2rem);
+  margin: 0;
+}
+
+#sign-up-form {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4rem;
+  column-gap: 7rem;
+  padding-top: 2rem;
+  align-items: center;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six {
+  position: relative;
+}
+
+label {
+  font-weight: 550;
+  position: absolute;
+  top: -1.5rem;
+}
+
+input {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  width: max(17rem, 15vw);
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+}
+
+input[type="password"]:invalid {
+  border: 1px solid red;
+}
+
+input:focus,
+input:active {
+  border: 1px solid blue;
+  box-shadow: 3px 3px 10px rgba(111, 105, 105, 0.3);
 }
