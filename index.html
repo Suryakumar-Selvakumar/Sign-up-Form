@@ -38,30 +38,45 @@
       </div>
       <div class="inputs">
         <p>Let's do this!</p>
-        <form action="#" id="sign-up-form">
+        <form action="#" method="POST" id="sign-up-form">
           <div id="one">
             <label for="first-name">FIRST NAME</label>
-            <input type="text" id="first-name" />
+            <input type="text" id="first-name" required />
           </div>
           <div id="two">
             <label for="last-name">LAST NAME</label>
-            <input type="text" id="last-name" />
+            <input type="text" id="last-name" required />
           </div>
           <div id="three">
             <label for="email">EMAIL</label>
-            <input type="email" id="email" />
+            <input type="email" id="email" required />
           </div>
           <div id="four">
             <label for="phone">PHONE NUMBER</label>
-            <input type="tel" id="phone" />
+            <input
+              type="tel"
+              id="phone"
+              pattern="^(?:\+1)?\s?\(?\d{3}\)?(-|.|\s)?\d{3}(-|.|\s)?\d{4}$"
+              required
+            />
           </div>
           <div id="five">
             <label for="password">PASSWORD</label>
-            <input type="password" id="password" />
+            <input
+              type="password"
+              id="password"
+              pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$"
+              required
+            />
           </div>
           <div id="six">
             <label for="confirm-password">CONFIRM PASSWORD</label>
-            <input type="password" id="confirm-password" />
+            <input
+              type="password"
+              id="confirm-password"
+              pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$"
+              required
+            />
           </div>
         </form>
       </div>

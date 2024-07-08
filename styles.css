@@ -131,16 +131,18 @@ input {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   width: max(17rem, 15vw);
+  outline: none;
   border: 1px solid #e5e7eb;
   border-radius: 5px;
 }
 
-input[type="password"]:invalid {
+input[type="password"]:user-invalid,
+input[type="email"]:user-invalid,
+input[type="tel"]:user-invalid {
   border: 1px solid red;
 }
 
-input:focus,
-input:active {
-  border: 1px solid blue;
+input:focus {
+  border: 1px solid rgb(67, 122, 232);
   box-shadow: 3px 3px 10px rgba(111, 105, 105, 0.3);
 }
